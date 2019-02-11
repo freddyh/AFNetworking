@@ -256,6 +256,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable AFHTTPRequestOperation *)POST:(NSString *)URLString
                       parameters:(nullable id)parameters
+                          xactID:(NSString*)xactID
                          success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                          failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
 
@@ -272,6 +273,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable AFHTTPRequestOperation *)POST:(NSString *)URLString
                       parameters:(nullable id)parameters
+                                   xactID:(NSString*)xactID
        constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
                          success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                          failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
@@ -288,6 +290,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable AFHTTPRequestOperation *)PUT:(NSString *)URLString
                      parameters:(nullable id)parameters
+                                  xactID:(NSString*)xactID
                         success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                         failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
 
@@ -318,6 +321,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable AFHTTPRequestOperation *)DELETE:(NSString *)URLString
                         parameters:(nullable id)parameters
+                                     xactID:(NSString*)xactID
                            success:(nullable void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                            failure:(nullable void (^)(AFHTTPRequestOperation * __nullable operation, NSError *error))failure;
 
